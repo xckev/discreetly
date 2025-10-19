@@ -578,11 +578,11 @@ final class ActionMapper: ObservableObject {
         let userName = settingsManager.settings.userName ?? "Unknown User"
         
         let fullMessage = if message.isEmpty {
-            "EMERGENCY: \(userName) needs immediate help. Live location and movement tracking enabled."
+            "Notification from: \(userName). Live location and movement tracking enabled."
         } else {
             // If the message doesn't already contain the user's name, prepend it
             if !message.contains(userName) {
-                "EMERGENCY - \(userName):\n\(message)"
+                "Notification - \(userName):\n\(message)"
             } else {
                 message
             }
